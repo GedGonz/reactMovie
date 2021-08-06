@@ -1,0 +1,9 @@
+.cardMovie{
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.cardMovie:hover {
+    opacity: 0.7;
+    width: 521px;
+  }

@@ -5,8 +5,8 @@ import GridCard from './components/GridCard';
 function App() {
   return (
     
-    <div>
-      <GridCard/>
+    <div className="container-fluid mt-4">
+      <GridCard />
         Hola desde React
     </div>
   );
