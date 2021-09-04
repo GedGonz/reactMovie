@@ -26,9 +26,10 @@ const [movies, setmovies] = useState([])
                 movies.map(movie=>  
                 <div className="col-md-4 px-5" key={movie.id}>
                     <Link to={"/detail/" + movie.id}>
-                    <img alt="movie" className="cardMovie" src={imageUrl+movie.poster_path} />
-                    <p className="text-center fw-bold">{movie.title}</p>
+                        <img alt="movie" className="cardMovie" src={imageUrl+movie.poster_path} />
                     </Link>
+                    <p className="text-center fw-bold">{movie.title}</p>
+                    
                 </div>
                 )
             }
