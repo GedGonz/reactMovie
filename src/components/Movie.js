@@ -1,6 +1,7 @@
 import React,{ useEffect, useState } from "react"
 import { useParams } from "react-router";
 import { get } from "../services/movieApi";
+import Card from "../components/Card";
 
 
 function Movie() {
@@ -22,12 +23,10 @@ function Movie() {
 
     }
 
-    const imageUrl = "https://image.tmdb.org/t/p/w500" + movi.poster_path;
     return (
         
         <div className="text-center">
-            <img alt="movies" className="cardMovie" src={imageUrl} />
-            <p className="text-center fw-bold">{movi.title}</p> 
+            <Card movie={movi}/>
         </div>
     )
 }
