@@ -10,7 +10,6 @@ import Movie from "./components/Movie";
 
 function App() {
   return (
-
       <Router>
         <div className="container-fluid mt-4">
           <Switch>

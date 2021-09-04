@@ -8,8 +8,6 @@ function Card(props) {
     return (
         <div>
             <Avatar imageUrl={imageUrl}/>
-             {/* <img alt="movies" className="cardMovie" src={imageUrl} /> */}
-            <p className="text-center fw-bold">{props.movie.title}</p> 
         </div>
     )
 }

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { get } from '../services/movieApi';
 import '../components/GridCard.css';
 import Card from '../components/Card';
-const imageUrl = "https://image.tmdb.org/t/p/w500";
 
 function GridCard() {
 
@@ -29,6 +28,7 @@ const [movies, setmovies] = useState([])
                   
                     <Link to={"/detail/" + movie.id}>
                         <Card movie={movie}/>
+                        <p className="text-center fw-bold">{movie.title}</p> 
                     </Link>
                 </div>
                 )
