@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from "react-router-dom";
 import { get } from '../services/movieApi';
 import '../components/GridCard.css';
 const imageUrl = "https://image.tmdb.org/t/p/w500";
@@ -24,8 +25,10 @@ const [movies, setmovies] = useState([])
             {
                 movies.map(movie=>  
                 <div className="col-md-4 px-5" key={movie.id}>
-                    <img  className="cardMovie" src={imageUrl+movie.backdrop_path} />
-                    <p className="text-center">{movie.title}</p>
+                    <Link to={"/detail/" + movie.id}>
+                    <img alt="movie" className="cardMovie" src={imageUrl+movie.poster_path} />
+                    <p className="text-center fw-bold">{movie.title}</p>
+                    </Link>
                 </div>
                 )
             }
