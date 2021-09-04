@@ -6,11 +6,14 @@ import {
 import './App.css';
 import GridCard from './components/GridCard';
 import Movie from "./components/Movie";
+import Nav from "./components/Nav";
 
 
 function App() {
   return (
+    
       <Router>
+        <Nav/>
         <div className="container-fluid mt-4">
           <Switch>
               <Route exact path="/">

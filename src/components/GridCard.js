@@ -15,7 +15,6 @@ const [movies, setmovies] = useState([])
     
     const getMovies= ()=>{
         get('discover/movie').then(resp=>{
-            console.log(resp.data.results);
             setmovies(resp.data.results);
         })
     }
@@ -27,7 +26,7 @@ const [movies, setmovies] = useState([])
                 <div className="col-md-4 px-5" key={movie.id}>
                   
                     <Link to={"/detail/" + movie.id}>
-                        <Card movie={movie}/>
+                        <Card movie={movie} classname="cardMovies"/>
                         <p className="text-center fw-bold">{movie.title}</p> 
                     </Link>
                 </div>

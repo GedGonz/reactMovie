@@ -1,9 +1,16 @@
+.cardMovies{
+    width: 500px;
+    height: 750px;
+    border-radius: 20px;
+    background: rgb(224, 246, 255);
+}
 .cardMovie{
-
+    width: 500px;
+    height: 750px;
     border-radius: 20px;
     background: rgb(224, 246, 255);
 }
 
-.cardMovie:hover {
+.cardMovies:hover {
     opacity: 0.7;
   }

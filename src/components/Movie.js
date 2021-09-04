@@ -31,10 +31,10 @@ function Movie() {
             <div className="col col-lg-1">
             </div>
             <div className="col-md-auto">
-                <Card movie={movi}/>
+                <Card movie={movi} classname="cardMovie"/>
             </div>
             <div className="col-md-4 mt-3">
-                <p className="fs-1 fw-bold">{movi?.title}</p> 
+                <p className="fs-1">{movi?.title}</p> 
                 <div className="fw-light"><span className="fw-bold ">Description: </span>{movi?.overview}</div> <br/>
                 <div className="fw-light"><span className="fw-bold ">Genres: </span>{movi?.genres?.map(x=>x.name)?.join(", ")}</div> <br/>
                 <div className="fw-light"><span className="fw-bold ">Language: </span> {movi?.original_language}</div> 
