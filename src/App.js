@@ -14,7 +14,7 @@ import Spinner from "./components/Spinner";
 function App() {
   return (
     
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Nav/>
         <div className="container-fluid">
           <Switch>
