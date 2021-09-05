@@ -19,7 +19,6 @@ function Movie() {
     const finMovie = (id)=>{
 
         get(`movie/${id}`).then(resp=>{
-            console.log("datos: ",resp.data);
             setmovi(resp.data);
         })
 
@@ -34,10 +33,21 @@ function Movie() {
                 <Card movie={movi} classname="cardMovie"/>
             </div>
             <div className="col-md-4 mt-3">
-                <p className="fs-1">{movi?.title}</p> 
-                <div className="fw-light"><span className="fw-bold ">Description: </span>{movi?.overview}</div> <br/>
-                <div className="fw-light"><span className="fw-bold ">Genres: </span>{movi?.genres?.map(x=>x.name)?.join(", ")}</div> <br/>
-                <div className="fw-light"><span className="fw-bold ">Language: </span> {movi?.original_language}</div> 
+                <p className="gradinTitle">{movi?.title}</p> 
+                <span className="gradinItem fw-bold ">Description: </span>
+                <div className="fw-light">{movi?.overview}</div>
+                <span className="gradinItem fw-bold ">Production companies: </span>
+                <div className="fw-light">{movi?.production_companies?.map(x=>x.name)?.join(", ")}</div>
+                <span className="gradinItem fw-bold ">Production countries: </span>
+                <div className="fw-light">{movi?.production_countries?.map(x=>x.name)?.join(", ")}</div>
+                <span className="gradinItem fw-bold ">Release date: </span>
+                <div className="fw-light">{movi?.release_date}</div>
+                <span className="gradinItem fw-bold ">Language: </span>
+                <div className="fw-light"> {movi?.original_language}</div> 
+                <span className="gradinItem fw-bold ">Genres: </span>
+                <div className="fw-light">{movi?.genres?.map(x=>x.name)?.join(", ")}</div>
+                <span className="gradinItem fw-bold ">Site: </span>
+                <div className="fw-light"><a className="white" href={movi?.homepage}>web</a></div>
             </div>
             
            

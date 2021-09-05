@@ -14,7 +14,7 @@ function App() {
     
       <Router>
         <Nav/>
-        <div className="container-fluid mt-4">
+        <div className="container-fluid">
           <Switch>
               <Route exact path="/">
                 <GridCard />

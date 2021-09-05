@@ -1,0 +1,32 @@
+body{
+    background: black;
+    color: white;
+}
+
+.bg-dark{
+    background: black !important;
+    color: white !important;
+}
+.bg-dark >div> a{
+    color: white !important;
+}
+
+.gradinTitle{
+    font-size: 60px;
+    background: -webkit-linear-gradient(#fff, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gradinItem{
+    font-size: 20px;
+    background: -webkit-linear-gradient(#fff, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradinText{
+    font-size: 18px;
+    background: -webkit-linear-gradient(#fff, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

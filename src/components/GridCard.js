@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import { Link } from "react-router-dom";
 import { get } from '../services/movieApi';
 import '../components/GridCard.css';
@@ -20,20 +20,26 @@ const [movies, setmovies] = useState([])
     }
 
     return (
-        <div className="row">
+        <Fragment>
+        
+        <div className="text-center gradinTitle">Tops Movies</div>
+
+        <div className="row  mt-4">
             {
                 movies.map(movie=>  
-                <div className="col-md-4 px-5" key={movie.id}>
+                <div className="col-md-2 px-5" key={movie.id}>
                   
-                    <Link to={"/detail/" + movie.id}>
+                    <Link to={"/detail/" + movie.id} >
                         <Card movie={movie} classname="cardMovies"/>
-                        <p className="text-center fw-bold">{movie.title}</p> 
+                        <p className="mt-1 text-center fw-bold gradinText">{movie.title}</p> 
                     </Link>
                 </div>
                 )
             }
            
         </div>
+        </Fragment>
+
     )
 }
 
