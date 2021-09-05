@@ -8,6 +8,7 @@ import GridCard from './components/GridCard';
 import Movie from "./components/Movie";
 import Nav from "./components/Nav";
 import Search from "./components/Search";
+import Spinner from "./components/Spinner";
 
 
 function App() {
@@ -25,6 +26,9 @@ function App() {
               </Route>
               <Route  path="/search">
                 <Search />
+              </Route>
+              <Route  path="/spinner">
+                <Spinner />
               </Route>
           </Switch>
         </div>

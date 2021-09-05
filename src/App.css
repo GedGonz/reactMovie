@@ -1,6 +1,7 @@
 body{
     background: black;
     color: white !important;
+    
 }
 
 .bg-dark{
@@ -29,4 +30,18 @@ body{
     background: -webkit-linear-gradient(#fff, #333);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+.spin{
+
+    position: absolute;
+    top: 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }

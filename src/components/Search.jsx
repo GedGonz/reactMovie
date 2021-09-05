@@ -1,15 +1,16 @@
 import React, { useState,useEffect } from 'react'
-import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { Fragment } from 'react/cjs/react.production.min';
 import { get } from '../services/movieApi';
 import Card from './Card';
+import Spinner from './Spinner';
 
 function Search() {
 
    
     const [movies, setmovies] = useState([])
     const [search, setSearch] = useState([""])
+    const [active, setActive] = useState(false)
 
     useEffect(()=>{
         searchMovies(search);
@@ -22,11 +23,14 @@ function Search() {
     }
 
     const searchMovies= (text)=>{
-
+        
+        setActive(true);
         const uri = (text?.length>1)? `search/movie?query=${text}`:
                                       'discover/movie';
-        get(uri).then(resp=>{
+        
+        get(uri).then(resp=>{            
             setmovies(resp.data.results);
+            setActive(false);
         }).catch(error => {
            
            });
@@ -36,7 +40,8 @@ function Search() {
     return (
 
         <Fragment>
-        <div className="col-md-4 offset-md-4">
+        <Spinner active={active}/>
+        <div className="col-md-4 offset-md-4 mt-5">
             <form >
                 <div className="input-group mb-3">
                     <input type="text" className="form-control text-center" placeholder="search movie" aria-label="search movie" onChange={handleChage}/>
