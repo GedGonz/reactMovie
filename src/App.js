@@ -7,6 +7,7 @@ import './App.css';
 import GridCard from './components/GridCard';
 import Movie from "./components/Movie";
 import Nav from "./components/Nav";
+import Search from "./components/Search";
 
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
               </Route>
               <Route  path="/detail/:id">
                 <Movie />
+              </Route>
+              <Route  path="/search">
+                <Search />
               </Route>
           </Switch>
         </div>
