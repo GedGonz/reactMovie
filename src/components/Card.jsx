@@ -6,7 +6,7 @@ function Card(props) {
 
     
     const imageUrl =(props.movie.poster_path)? `https://image.tmdb.org/t/p/w${props.classname==="cardMovies"?"200":"500"}${props.movie.poster_path}`:
-                                                '../not_found.jpg'; 
+                                                'not_found.jpg'; 
     
     return (
         <div>
