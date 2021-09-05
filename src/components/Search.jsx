@@ -9,7 +9,7 @@ function Search() {
 
    
     const [movies, setmovies] = useState([])
-    const [search, setSearch] = useState(["batman"])
+    const [search, setSearch] = useState([""])
 
     useEffect(()=>{
         searchMovies(search);
@@ -22,9 +22,14 @@ function Search() {
     }
 
     const searchMovies= (text)=>{
-        get(`search/movie?query=${text}`).then(resp=>{
+
+        const uri = (text?.length>1)? `search/movie?query=${text}`:
+                                      'discover/movie';
+        get(uri).then(resp=>{
             setmovies(resp.data.results);
-        })
+        }).catch(error => {
+           
+           });
     }
 
 
