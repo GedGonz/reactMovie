@@ -4,8 +4,7 @@
     background: rgba(233, 237, 238, 0.616);
 }
 .cardMovie{
-    width: 500px;
-    height: 750px;
+    width: 100%;
     border-radius: 20px;
     background: rgba(233, 237, 238, 0.616);
 }

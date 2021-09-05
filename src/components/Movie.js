@@ -32,7 +32,7 @@ function Movie() {
            <div className="row justify-content-md-center">
             <div className="col col-lg-1">
             </div>
-            <div className="col-md-auto">
+            <div className="col-md-auto text-center">
                 <Card movie={movi} classname="cardMovie"/>
             </div>
             <div className="col-md-4 mt-3">

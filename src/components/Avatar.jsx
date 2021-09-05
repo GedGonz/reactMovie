@@ -1,11 +1,7 @@
 import React from 'react'
 
 function Avatar(props) {
-    return (
-        <div>
-            <img alt="movies" className={props.classname} src={props?.imageUrl} />
-        </div>
-    )
+    return (<img alt="movies" className={props.classname} src={props?.imageUrl} />)
 }
 
 export default Avatar

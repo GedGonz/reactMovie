@@ -9,10 +9,8 @@ function Card(props) {
                                                 'not_found.jpg'; 
     
     return (
-        <div>
             <Avatar imageUrl={imageUrl} classname={props.classname}/>
-        </div>
-    )
+           )
 }
 
 export default Card
