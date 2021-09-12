@@ -1,7 +1,8 @@
 import React from 'react'
 
 function Avatar(props) {
-    return (<img alt="movies" className={props.classname} src={props?.imageUrl} />)
+    const style = (props.imageUrl=='../not_found.jpg')?'cardMovieNotFound':props.classname;
+    return (<img alt="movies" className={style} src={props?.imageUrl} />)
 }
 
 export default Avatar
