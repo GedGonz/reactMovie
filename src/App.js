@@ -18,17 +18,17 @@ function App() {
         <Nav/>
         <div className="container-fluid">
           <Switch>
-              <Route exact path="/">
-                <GridCard />
-              </Route>
-              <Route  path="/detail/:id">
+              <Route exact path="/detail/:id">
                 <Movie />
               </Route>
-              <Route  path="/search">
+              <Route exact path="/search">
                 <Search />
               </Route>
-              <Route  path="/spinner">
+              <Route exact path="/spinner">
                 <Spinner />
+              </Route>
+              <Route exact path="/">
+                <GridCard />
               </Route>
           </Switch>
         </div>
